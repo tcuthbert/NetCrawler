@@ -1,0 +1,10 @@
+IPy==0.83
+pyasn1==0.1.9
+pycrypto==2.6.1
+pyparsing==1.5.7
+pytz==2014.2
+redis==2.10.3
+SimpleParse==2.1.1
+trigger==1.5.2
+Twisted==15.4.0
+zope.interface==4.1.3

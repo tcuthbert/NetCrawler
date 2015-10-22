@@ -1,0 +1,3 @@
+[submodule "vendor/textfsm"]
+	path = vendor/textfsm
+	url = https://github.com/jonathanslenders/textfsm
