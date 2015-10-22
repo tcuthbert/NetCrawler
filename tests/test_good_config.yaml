@@ -1,0 +1,10 @@
+---
+
+devices:
+  - "testa"
+  - "testb"
+
+commands:
+  - "show version"
+  - "show inventory"
+  - "show int desc"

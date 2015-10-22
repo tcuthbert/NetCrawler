@@ -1,0 +1,10 @@
+---
+
+devices:
+  - "testa"
+  - 1
+
+commands:
+  - "show version"
+  - {bad: "test"}
+  - "show int desc"
