@@ -1,10 +1,18 @@
 ---
 
 devices:
-  - "testa"
-  - "testb"
+  - { "1.1.1.1": "cisco" }
+  - { "2.2.2.2": "cisco" }
+  - { "10.10.10.10": "cisco" }
+  - { "20.20.20.20": "cisco" }
+  - { "100.100.100.100": "cisco" }
+  - { "200.200.200.200": "cisco" }
 
 commands:
   - "show version"
+  - "show version | in .bin"
   - "show inventory"
   - "show int desc"
+  - "show logging"
+  - "show ip access-lists"
+  - "show run"

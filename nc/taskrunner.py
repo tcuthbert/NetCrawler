@@ -1,11 +1,22 @@
 from trigger.cmds import Commando
 
 
-
-class TaskRunner(Commando):
+class Runner(Commando):
+    vendors = []
     commands = []
-    
-    def __init__(self, config, *args, **kwargs):
-        self.commands = config["commands"]
-        self.devices = config["devices"]
-        super(TaskRunner, self).__init__()
+
+
+class Discovery(object):
+    def __init__(self, *args, **kwargs):
+        devices, vendors = zip(*map(lambda i: i.items()[0], kwargs["devices"]))
+        runner = Runner
+        runner.vendors = vendors
+        runner.commands = kwargs["commands"]
+        self._driver = Runner(devices=devices)
+
+    def run(self):
+        self._driver.run()
+
+    @property
+    def results(self):
+        return self._driver.results
